@@ -63,7 +63,7 @@
             padding: 0 20px 20px;
             display: none;
             color: #c0c0ff;
-            font-size: 1rem;
+            font-size: 0.95rem;
             line-height: 1.5;
         }
         .dropdown.active .dropdown-content {
@@ -76,17 +76,9 @@
             transform: rotate(180deg);
         }
 
-        /* Smaller disclaimer box */
-        .disclaimer {
-            background: #1f1f3a;
+        /* Special styling for disclaimer dropdown */
+        .disclaimer-header {
             border-left: 4px solid #ffaa77;
-            padding: 18px 22px;
-            margin: 40px auto;
-            max-width: 620px;
-            text-align: left;
-            font-size: 0.93rem;
-            color: #c0c0ff;
-            border-radius: 6px;
         }
 
         .contact {
@@ -160,14 +152,20 @@
         </div>
     </div>
 
-    <!-- Important Disclaimer -->
-    <div class="disclaimer">
-        <strong>Important Disclaimer</strong><br><br>
-        I am not sponsored by, affiliated with, or endorsed by Nintendo, Sony, Microsoft, or any console manufacturer in any way.<br><br>
-        I only perform requested modifications on consoles that you already legally own. All work is done at your request and with your full permission.<br><br>
-        Modding may void any remaining manufacturer warranty, and there is always a small risk of issues if something unexpected happens during the process. (That said, I take my process incredibly seriously and follow trusted, step-by-step guides with care to keep your console and games safe.)<br><br>
-        I do <strong>not</strong> install, provide, or assist with any pirated games, ROMs, or copyrighted material. You are fully responsible for using the modified console only with games and software you have legal rights to.<br><br>
-        Services are provided “as is.” While I take every precaution, I am not liable for any damage, data loss, or other issues that may occur despite my best efforts.
+    <!-- Disclaimer as its own dropdown -->
+    <div class="section">
+        <div class="dropdown">
+            <div class="dropdown-header disclaimer-header" onclick="toggleDropdown(this)">
+                Important Disclaimer <span class="arrow">▼</span>
+            </div>
+            <div class="dropdown-content">
+                I am not sponsored by, affiliated with, or endorsed by Nintendo, Sony, Microsoft, or any console manufacturer in any way.<br><br>
+                I only perform requested modifications on consoles that you already legally own. All work is done at your request and with your full permission.<br><br>
+                Modding may void any remaining manufacturer warranty, and there is always a small risk of issues if something unexpected happens during the process. (That said, I take my process incredibly seriously and follow trusted, step-by-step guides with care to keep your console and games safe.)<br><br>
+                I do <strong>not</strong> install, provide, or assist with any pirated games, ROMs, or copyrighted material. You are fully responsible for using the modified console only with games and software you have legal rights to.<br><br>
+                Services are provided “as is.” While I take every precaution, I am not liable for any damage, data loss, or other issues that may occur despite my best efforts.
+            </div>
+        </div>
     </div>
 
     <div class="section">
@@ -184,7 +182,7 @@
     </div>
 
     <footer>
-        <p>More coming soon: Music page • Modding portfolio • Full disclaimer</p>
+        <p>More coming soon: Music page • Modding portfolio</p>
         <p>Made by Connor • Retrocellmods</p>
     </footer>
 
@@ -195,5 +193,4 @@
         }
     </script>
 </body>
-</html>
 </html>
