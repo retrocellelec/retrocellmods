@@ -6,15 +6,15 @@
     <title>Retrocellmods • Retro Console Modding</title>
     <style>
         :root {
-            --bg: #0b0e1f;
-            --accent: #00e5ff;
-            --accent-glow: #00f5ff;
-            --text: #e0f8ff;
-            --card: #111827;
+            --accent: #00f5ff;
+            --light: #f0f8ff;
+            --text: #112233;
+            --card: #ffffff;
+            --subtle: #e0f0ff;
         }
 
         body {
-            background: linear-gradient(135deg, #0b0e1f 0%, #0f1629 100%);
+            background: linear-gradient(135deg, #a0e0ff 0%, #e0f8ff 50%, #c0f0ff 100%);
             color: var(--text);
             font-family: system-ui, -apple-system, sans-serif;
             margin: 0;
@@ -25,19 +25,19 @@
         }
 
         h1 {
-            font-size: 4rem;
+            font-size: clamp(2.4rem, 8vw, 3.9rem);   /* This makes it scale nicely */
             font-weight: 700;
-            background: linear-gradient(90deg, #a0f8ff, var(--accent));
+            background: linear-gradient(90deg, #0066ff, #00f5ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 8px;
-            letter-spacing: -3px;
-            text-shadow: 0 0 30px rgba(0, 229, 255, 0.4);
+            letter-spacing: -1.5px;
+            line-height: 1.05;
         }
 
         .subtitle {
-            color: #88ddff;
-            font-size: 1.4rem;
+            color: #0066aa;
+            font-size: clamp(1.1rem, 4vw, 1.4rem);
             margin-bottom: 50px;
             letter-spacing: 2px;
             font-weight: 500;
@@ -45,33 +45,31 @@
 
         .intro {
             max-width: 680px;
-            margin: 0 auto 70px;
+            margin: 0 auto 60px;
             font-size: 1.2rem;
-            color: #b0e8ff;
+            color: #113355;
         }
 
         .section {
             max-width: 720px;
-            margin: 80px auto;
+            margin: 70px auto;
             text-align: left;
         }
 
         h2 {
-            color: var(--accent);
+            color: #003366;
             font-size: 1.65rem;
             margin-bottom: 24px;
-            letter-spacing: 1px;
         }
 
-        /* Sleek futuristic dropdowns */
+        /* Sleek bright dropdowns */
         .dropdown {
             background: var(--card);
             margin: 16px 0;
-            border-radius: 14px;
+            border-radius: 16px;
             overflow: hidden;
-            border: 1px solid rgba(0, 229, 255, 0.15);
-            box-shadow: 0 8px 25px rgba(0, 229, 255, 0.1);
-            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 180, 255, 0.12);
+            border: 1px solid #a0e0ff;
         }
         .dropdown-header {
             padding: 20px 26px;
@@ -80,47 +78,48 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: white;
             transition: all 0.3s ease;
         }
         .dropdown-header:hover {
-            background: #1a2238;
+            background: #f0faff;
         }
         .dropdown-content {
             padding: 0 26px 26px;
             display: none;
-            color: #b0e0ff;
-            font-size: 1.03rem;
+            color: #224466;
+            font-size: 1.05rem;
         }
         .dropdown.active .dropdown-content {
             display: block;
         }
         .arrow {
             transition: transform 0.4s ease;
-            font-size: 1.2rem;
+            color: var(--accent);
         }
         .dropdown.active .arrow {
             transform: rotate(180deg);
         }
 
         .disclaimer-header {
-            border-left: 5px solid #ffaa77;
+            border-left: 5px solid #ff8855;
         }
 
         .contact {
-            background: var(--card);
+            background: white;
             padding: 36px;
-            border-radius: 16px;
+            border-radius: 20px;
             max-width: 520px;
             margin: 60px auto;
-            border: 1px solid rgba(0, 229, 255, 0.2);
-            box-shadow: 0 10px 30px rgba(0, 229, 255, 0.08);
+            box-shadow: 0 10px 30px rgba(0, 180, 255, 0.15);
+            border: 1px solid #b0e0ff;
         }
 
         footer {
             margin-top: 110px;
             font-size: 0.92rem;
-            opacity: 0.65;
-            letter-spacing: 0.8px;
+            color: #335577;
+            opacity: 0.85;
         }
 
         a {
@@ -182,6 +181,7 @@
         </div>
     </div>
 
+    <!-- Disclaimer Dropdown -->
     <div class="section">
         <div class="dropdown">
             <div class="dropdown-header disclaimer-header" onclick="toggleDropdown(this)">
