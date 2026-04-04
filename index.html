@@ -10,7 +10,6 @@
             --light: #f0f8ff;
             --text: #112233;
             --card: #ffffff;
-            --subtle: #e0f0ff;
         }
 
         body {
@@ -25,7 +24,7 @@
         }
 
         h1 {
-            font-size: clamp(2.4rem, 8vw, 3.9rem);   /* This makes it scale nicely */
+            font-size: clamp(2.4rem, 8vw, 3.9rem);
             font-weight: 700;
             background: linear-gradient(90deg, #0066ff, #00f5ff);
             -webkit-background-clip: text;
@@ -62,7 +61,7 @@
             margin-bottom: 24px;
         }
 
-        /* Sleek bright dropdowns */
+        /* Sleek dropdowns with cyan accent */
         .dropdown {
             background: var(--card);
             margin: 16px 0;
@@ -80,6 +79,7 @@
             align-items: center;
             background: white;
             transition: all 0.3s ease;
+            border-left: 5px solid var(--accent);
         }
         .dropdown-header:hover {
             background: #f0faff;
@@ -115,8 +115,17 @@
             border: 1px solid #b0e0ff;
         }
 
+        .music-section {
+            max-width: 520px;
+            margin: 60px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 180, 255, 0.1);
+        }
+
         footer {
-            margin-top: 110px;
+            margin-top: 80px;
             font-size: 0.92rem;
             color: #335577;
             opacity: 0.85;
@@ -210,9 +219,20 @@
         <p>I'll reply as soon as I can.</p>
     </div>
 
+    <!-- Music Links -->
+    <div class="music-section">
+        <h2>Listen to Astrocell</h2>
+        <p>Chill celestial beats and synthwave</p>
+        <p>
+            <a href="https://on.soundcloud.com/VTdpeEc5sNMtOb36qr" target="_blank">SoundCloud</a> • 
+            <a href="https://music.apple.com/us/artist/astrocell/1552551980" target="_blank">Apple Music</a> • 
+            <a href="https://open.spotify.com/artist/0kGkj49vks1JlnPK47xW5P?si=Nr_LC5TgQROLdBggPGWlKw" target="_blank">Spotify</a>
+        </p>
+    </div>
+
     <footer>
-        <p>More coming soon: Music page • Modding portfolio</p>
-        <p>Made by Connor • Retrocellmods</p>
+        <p>Coming soon: Music page • Modding portfolio • QR code for business cards</p>
+        <p>Project by Astrocell • Retrocellmods</p>
     </footer>
 
     <script>
